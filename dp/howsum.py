@@ -1,5 +1,5 @@
 
-# from functools import cache
+from functools import cache
 
 
 def how_sum(target_sum, numbers, memo):
