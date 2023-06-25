@@ -2,9 +2,6 @@
 # from functools import cache
 
 
-memo = {}
-
-
 def how_sum(target_sum, numbers, memo):
     """
 
@@ -31,6 +28,7 @@ def how_sum(target_sum, numbers, memo):
             memo[target_sum] = res + [num]
             return memo[target_sum]
 
+    memo[target_sum] = None
     return None
 
 # Time Complexity
@@ -42,12 +40,11 @@ def how_sum(target_sum, numbers, memo):
 # Space: O(m)
 
 
-print(how_sum(7, [2, 3], memo))  # [3, 2, 2]
-print(how_sum(7, [5, 3, 4, 7], memo))  # [4, 3]
-print(how_sum(7, [2, 4], memo))  # null
-print(how_sum(8, [2, 3, 5], memo))  # [2, 2, 2, 2]
-print(how_sum(300, [7, 14], memo))  # null
-print(sum(how_sum(300, [7, 14], memo)))
+print(how_sum(7, [2, 3], {}))  # [3, 2, 2]
+print(how_sum(7, [5, 3, 4, 7], {}))  # [4, 3]
+print(how_sum(7, [2, 4], {}))  # null
+print(how_sum(8, [2, 3, 5], {}))  # [2, 2, 2, 2]
+print(how_sum(300, [7, 14], {}))  # null
 
 
 @cache
