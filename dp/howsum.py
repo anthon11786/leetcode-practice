@@ -6,8 +6,6 @@ def how_sum(target_sum, numbers, memo):
     """
 
     """
-    # if memo is None:
-    #     memo = {}
     # Base cases
     if target_sum == 0:
         return []
@@ -36,8 +34,8 @@ def how_sum(target_sum, numbers, memo):
 # n = numbers.length
 
 # Memoization
-# Time: O()
-# Space: O(m)
+# Time: O(n*m*m) -> O(n*m*2)
+# Space: O(m^2))
 
 
 print(how_sum(7, [2, 3], {}))  # [3, 2, 2]
