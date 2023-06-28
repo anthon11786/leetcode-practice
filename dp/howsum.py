@@ -22,7 +22,7 @@ def how_sum(target_sum, numbers, memo):
         if res is not None:
             # Early return because can return any valid combo
             # !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-            # Python nuance ! use '+' to concatenate lists not .append()
+            # Python nuance ! use '+' to concatenate lists not .append() creates self reference
             memo[target_sum] = res + [num]
             return memo[target_sum]
 
