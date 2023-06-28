@@ -53,3 +53,12 @@ print(best_sum(7, [5, 3, 4, 7], {}))
 print(best_sum(8, [2, 3, 5], {}))
 print(best_sum(8, [1, 4, 5], {}))
 print(best_sum(100, [1, 2, 5, 25], {}))
+
+
+#  Dynamic Programming
+
+# can_sum -> Decision Problem
+
+# how_sum -> Combinatoric Problem
+
+# best_sum -> Optimization Problem
