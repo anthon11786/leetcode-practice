@@ -25,21 +25,37 @@ b.left = d
 b.right = e
 c.right = f
 
-# Recurisve
+# Iterative solution
 
 
 def dfs(root: Node, target: int):
     stack = [root]
     while len(stack) > 0:
-        curr = stack.pop()
+        curr = stack.pop()  # leaves stack, node is 'visited'
         print(curr.val)
         if curr.val == target:
             return True
-        if curr.left is not None:
-            stack.append(curr.left)
         if curr.right is not None:
             stack.append(curr.right)
+        if curr.left is not None:
+            stack.append(curr.left)
     return False
 
+# Time: O(n)
+# Space: O(n)
 
-print(dfs(a, -2))
+
+print(dfs(a, 4))
+
+
+# recursive solution
+def dfs_recrusive(root: Node, target: int):
+    if root is None:
+        return  # base case is trivially small
+
+    print(root.val)
+    dfs_recrusive(root.left, target)
+    dfs_recrusive(root.right, target)
+
+
+dfs_recrusive(a, 5)
